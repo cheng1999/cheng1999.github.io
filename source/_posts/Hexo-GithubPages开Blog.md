@@ -1,10 +1,9 @@
----
 title: Hexo 和 Github Pages 开 Blog (1)
-date: 2016-11-04 21:10:26
 tags:
   - 有点难度
 categories:
   - 电脑
+date: 2016-11-04 21:10:26
 ---
 Github 有一个 Github Pages 的功能。
 这个文章简单说明如何用 Hexo 在 Github Pages 上弄博客。

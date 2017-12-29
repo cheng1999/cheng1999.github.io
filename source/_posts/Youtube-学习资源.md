@@ -1,14 +1,11 @@
----
 title: Youtube 学习资源
-date: 2016-10-30 11:01:48
 tags:
   - 分享
   - 无难度
 categories:
   - 课外
+date: 2016-10-30 11:01:00
 ---
-
-
 小时候看电视对科普频道情有独钟。
 后来电视被爸爸锁了，现在是偶尔看看 Youtube。
 <!-- more -->
@@ -56,6 +53,11 @@ Thoughty2 (Arran) is a British YouTuber and gatekeeper of useless facts. Thought
 话说，我们的化学老师 Mr Jimmy Kong 曾经在课上给我们看过里面其中一个 Video。
 也和 Vsauce 有点像。
 **网址**: <https://www.youtube.com/user/Thoughty2/>
+
+<br>
+### 啾啾鞋
+台湾版 Vsauce，最近好像还挺红的，有很多冷知识、说书。
+**网址**: <https://www.youtube.com/user/chuchushoeTW>
 
 <br>
 ### Minute 系列
