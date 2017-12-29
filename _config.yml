@@ -73,3 +73,6 @@ deploy:
   repo: git@github.com:cheng1999/cheng1999.github.io
   branch: master
 
+
+admin:
+  deployCommand: 'hexo'
