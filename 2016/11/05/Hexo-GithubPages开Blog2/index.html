@@ -1,0 +1,584 @@
+
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1474078653145626",
+    enable_page_level_ads: true
+  });
+</script>
+
+ 
+  
+    <title>Hexo 和 Github Pages 开 Blog (2) | 国成 Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="李国成">
+    
+
+    
+    <meta name="description" content="Github 有一个 Github Pages 的功能。这个文章简单说明如何用 Hexo 在 Github Pages 上弄博客。">
+<meta name="keywords" content="有点难度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 和 Github Pages 开 Blog (2)">
+<meta property="og:url" content="https://cheng1999.github.io/2016/11/05/Hexo-GithubPages开Blog2/index.html">
+<meta property="og:site_name" content="国成 Blog">
+<meta property="og:description" content="Github 有一个 Github Pages 的功能。这个文章简单说明如何用 Hexo 在 Github Pages 上弄博客。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-26T09:38:27.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 和 Github Pages 开 Blog (2)">
+<meta name="twitter:description" content="Github 有一个 Github Pages 的功能。这个文章简单说明如何用 Hexo 在 Github Pages 上弄博客。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="国成 Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/logo.png">
+    
+    
+    <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+  <body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="国成 Blog" title="国成 Blog"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="国成 Blog">国成 Blog</a></h1>
+				<h2 class="blog-motto">cheng1999</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Blog</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索">
+					</form>
+					
+					</li>
+				</ul>
+			</ul></nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/11/05/Hexo-GithubPages开Blog2/" title="Hexo 和 Github Pages 开 Blog (2)" itemprop="url">Hexo 和 Github Pages 开 Blog (2)</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="李国成" target="_blank" itemprop="author">李国成</a>
+		
+  </p><p class="article-time">
+    <time datetime="2016-11-05T10:14:57.000Z" itemprop="datePublished"> 发表于 2016-11-05</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-Github-Pages"><span class="toc-number">1.</span> <span class="toc-text">关于 Github Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-number">1.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点"><span class="toc-number">1.2.</span> <span class="toc-text">缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单的开始"><span class="toc-number">2.</span> <span class="toc-text">简单的开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-Github-Pages-部署"><span class="toc-number">3.</span> <span class="toc-text">Hexo Github Pages 部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立-git-和-Github-的-SSH-访问通道"><span class="toc-number">3.1.</span> <span class="toc-text">建立 git 和 Github 的 SSH 访问通道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-部分"><span class="toc-number">3.2.</span> <span class="toc-text">Hexo 部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它"><span class="toc-number">3.3.</span> <span class="toc-text">其它</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">4.</span> <span class="toc-text">后记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2018年更新"><span class="toc-number">4.1.</span> <span class="toc-text">2018年更新</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p>Github 有一个 Github Pages 的功能。<br>这个文章简单说明如何用 Hexo 在 Github Pages 上弄博客。</p>
+<a id="more"></a>
+<h2 id="关于-Github-Pages"><a href="#关于-Github-Pages" class="headerlink" title="关于 Github Pages"></a>关于 Github Pages</h2><p><br><br><br><div class="video-container"><iframe src="//www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe></div></p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>我觉得有逼格</li>
+<li>相对稳定</li>
+<li>免费</li>
+</ul>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
+<li>100GB 流量 or 100,000 requests</li>
+<li>1GB 容量</li>
+<li>静态网页，动态的功能要动用到外部的服务<br>这些限制对大部分人也太够了</li>
+</ul>
+<h2 id="简单的开始"><a href="#简单的开始" class="headerlink" title="简单的开始"></a>简单的开始</h2><p>如果这个不会你应该看不懂下面的内容了……</p>
+<p><strong>第一步</strong>: 创建 Repository</p>
+<blockquote>
+<p>在 Github 上创建一个 repository，名字叫 <strong><em>username.github.io</em></strong>。其中 <strong><em>username</em></strong> 就是你的用户名啦(阿废话阿)！</p>
+</blockquote>
+<p><strong>第二步</strong>: Git clone 下来。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/username/username.github.io</span><br></pre></td></tr></table></figure></p>
+<p><strong>第三步</strong>: 创建文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> username.github.io</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"Hello World"</span> &gt; index.html</span><br></pre></td></tr></table></figure></p>
+<p><strong>第四步</strong>: Commit and Push<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add --all</span><br><span class="line">$ git commit -m <span class="string">"Initial commit"</span></span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p><strong>第五步</strong>: 访问 <strong><em> http://username.github.io </em></strong> 。</p>
+<blockquote>
+<p>如果你是针对一个项目来特别设立 Github Pages，就要在那个项目的 repository 下创建一个 Branch 名字叫 <code>gh-pages</code>。<br>这个 Page 的地址就是 <strong><em> http://username.github.io/repository-name </em></strong>。<strong><em>repository-name</em></strong> 要填什么自己知道。</p>
+</blockquote>
+<p><a href="#后记">之前</a>说到 许善旻同学 纯手工产代码的故事就是在第三步的不停折腾……</p>
+<h2 id="Hexo-Github-Pages-部署"><a href="#Hexo-Github-Pages-部署" class="headerlink" title="Hexo Github Pages 部署"></a>Hexo Github Pages 部署</h2><p>终于到了这个部分，Hexo 是可以把博客部署到不同平台的。<br>怎么生成静态网页部署到 Github Pages 去 ?</p>
+<p><br></p>
+<h3 id="建立-git-和-Github-的-SSH-访问通道"><a href="#建立-git-和-Github-的-SSH-访问通道" class="headerlink" title="建立 git 和 Github 的 SSH 访问通道"></a>建立 git 和 Github 的 SSH 访问通道</h3><p><em>参考</em>: <a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="noopener">https://help.github.com/articles/generating-an-ssh-key/</a><br><strong>第一步</strong>: 生成 SSH key<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>第二步</strong>: 把 SSH key 加入 ssh-agent</p>
+<ul>
+<li>就是把 SSH private key 交给 ssh-agent，这样其它程序需要 key 时可以向 ssh-agent 申请，我们这些懒人就可以不需要一直打密码了。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span> <span class="comment"># 开 ssh-agent</span></span><br><span class="line">$ ssh-add ~/.ssh/id_rsa <span class="comment"># 交 SSH private key 给 ssh-agent</span></span><br></pre></td></tr></table></figure>
+<p><strong>第三步</strong>: 把 SSH key 加入 Github 账户</p>
+<ul>
+<li>储存 public key 的文件 <code>~/.ssh/id_rsa.pub</code>，把里面的内容 copy出来。</li>
+<li>去 Github &gt; <code>Settings</code> &gt; <code>SSH and GPG keys</code> &gt; <code>New SSH key</code> &gt; (填空位，paste public key) &gt; <code>Add SSH Key</code><blockquote>
+<p>也可以针对单个 Repository 来填加 SSH key</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>第四步(可选)</strong>: 测试和 Github 的连接，你足够自信可以跳过这个步骤。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi cheng1999! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h3 id="Hexo-部分"><a href="#Hexo-部分" class="headerlink" title="Hexo 部分"></a>Hexo 部分</h3><p><strong>第一步</strong>: 配置 Deployment<br>编辑 <code>_config.yml</code>，去最后一行，配置示范如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:cheng1999/cheng1999.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p><strong>第二步</strong>: DEPLOY!<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy <span class="comment"># DEPLOY!</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>Hexo Deploy 到 Github Pages 的方法其实就是生成静态网页，然后 push 到 Repository 上。因为 push 是 force 的，所以如果你把目录下的 <code>.deploy_git</code> 删掉再 <code>hexo deploy</code> 一次，Github 上的 Commit 会被 reset掉。</p>
+<p>还有一个建议就是 Repository 可以创建另一个 branch 来放 Hexo 的目录。(master branch 是用来放部署的静态网页)。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>后记我还想再放这个:</p>
+<blockquote>
+<p>班上的 许善旻同学 在我的诱骗下也用了 Github Pages，而且纯手工自己产代码哦！<del>(挺勤奋挺傻的)</del><br>附上几个 link:</p>
+<ul>
+<li><a href="https://oscarhii.github.io/chs%20web/home.html" target="_blank" rel="noopener">https://oscarhii.github.io/chs%20web/home.html</a></li>
+<li><a href="https://oscarhii.github.io/web%20new/home.html" target="_blank" rel="noopener">https://oscarhii.github.io/web%20new/home.html</a></li>
+<li><a href="https://oscarhii.github.io/birthday.html" target="_blank" rel="noopener">https://oscarhii.github.io/birthday.html</a><br><em>链接未经过他人同意被我嚣张擅自引用。</em></li>
+</ul>
+</blockquote>
+<h3 id="2018年更新"><a href="#2018年更新" class="headerlink" title="2018年更新"></a>2018年更新</h3><p>重温博客时发现没有教如何发文章，发官网docs:<br><a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">https://hexo.io/docs/writing.html</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/电脑/">电脑</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/有点难度/">有点难度</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://cheng1999.github.io/2016/11/05/Hexo-GithubPages开Blog2/" data-title="Hexo 和 Github Pages 开 Blog (2) | 国成 Blog" data-tsina class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2018/06/26/学校联课活动需要改进/" title="学校联课活动需要改进(未完成)">
+  <strong>上一篇：</strong><br>
+  <span>
+  学校联课活动需要改进(未完成)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/11/04/Hexo-GithubPages开Blog/" title="Hexo 和 Github Pages 开 Blog (1)">
+ <strong>下一篇：</strong><br> 
+ <span>Hexo 和 Github Pages 开 Blog (1)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于-Github-Pages"><span class="toc-number">1.</span> <span class="toc-text">关于 Github Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-number">1.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缺点"><span class="toc-number">1.2.</span> <span class="toc-text">缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单的开始"><span class="toc-number">2.</span> <span class="toc-text">简单的开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-Github-Pages-部署"><span class="toc-number">3.</span> <span class="toc-text">Hexo Github Pages 部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立-git-和-Github-的-SSH-访问通道"><span class="toc-number">3.1.</span> <span class="toc-text">建立 git 和 Github 的 SSH 访问通道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-部分"><span class="toc-number">3.2.</span> <span class="toc-text">Hexo 部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它"><span class="toc-number">3.3.</span> <span class="toc-text">其它</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">4.</span> <span class="toc-text">后记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2018年更新"><span class="toc-number">4.1.</span> <span class="toc-text">2018年更新</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="cheng1999" data-theme="medium"></div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+</div>
+
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/其它/" title="其它">其它<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/数学/" title="数学">数学<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/电脑/" title="电脑">电脑<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/课外/" title="课外">课外<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/有点难度/" title="有点难度">有点难度<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/分享/" title="分享">分享<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/无难度/" title="无难度">无难度<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/学校/" title="学校">学校<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/有难度/" title="有难度">有难度<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/神经网络/" title="神经网络">神经网络<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://zypeh.github.io/" target="_blank" title="Zypeh Blog">Zypeh Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://yami.io/" target="_blank" title="Yami Blog">Yami Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://hang333.pw/" target="_blank" title="hang333 Blog">hang333 Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 关于我 ： `` 想学专业的学渣 `` <br>
+			关于现实 ： `` 智商不够高就乖乖认命吧 ``</p>
+	</section>
+	 
+	<div class="social-font">
+		
+		
+		<a href="https://github.com/cheng1999" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		<a href="https://www.facebook.com/detective1999" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		
+		
+		
+		
+		<a href="mailto:detective1854@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		
+		<a href="/about" target="_blank" title="李国成">李国成</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-86417025-1', 'auto');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  </body>
+</html>
+
