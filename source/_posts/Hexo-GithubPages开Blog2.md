@@ -119,3 +119,9 @@ Hexo Deploy 到 Github Pages 的方法其实就是生成静态网页，然后 pu
 - <https://oscarhii.github.io/web%20new/home.html>
 - <https://oscarhii.github.io/birthday.html>
 *链接未经过他人同意被我嚣张擅自引用。*
+
+
+### 2018年更新
+重温博客时发现没有教如何发文章，发官网docs:
+<https://hexo.io/docs/writing.html>
+

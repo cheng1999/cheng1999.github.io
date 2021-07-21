@@ -54,13 +54,13 @@ creative_commons: none
 
 #### Author information
 author:
-  intro_line1:  "关于我 ： `` 想学专业的学渣 ``"
-  intro_line2:  "关于现实 ： `` 智商不够高就乖乖认命吧 ``"
-  zhihu: li-guo-cheng-2
+  intro_line1:  "子曰：`` 無為而治者，其舜也與？ 夫何為哉？恭己正南面而已矣。``"
+  intro_line2:  ""
+  ## zhihu: li-guo-cheng-2
   email: detective1854@gmail.com
   github: cheng1999
   facebook: detective1999
-  google_plus:  102362774159314850670
+  ## google_plus:  102362774159314850670
   #stackoverflow:  ## e.g. 3222790 for http://stackoverflow.com/users/3222790/jark
 ## if you set them, the corresponding  share button will show on the footer
 
@@ -87,7 +87,8 @@ jiathis:
 
 #### Analytics
 google_analytics:
-  enable: false
+  enable: true 
+  ## enable: false 
   id: UA-86417025-1
   site: auto
 ## You MUST upgrade to Universal Analytics first!
@@ -100,6 +101,10 @@ cnzz_tongji:
   enable: false
   siteid:    ## e.g. 1253575964 your cnzz tongji site id
 
+#### Ads
+google_adsense:
+  enable: true 
+  id: ca-pub-1474078653145626
 
 
 #### Miscellaneous
@@ -110,7 +115,7 @@ totop: true           ## if you want to scroll to top in every post set the valu
 
 #### Custom Search
 google_cse: 
-  enable: false
+  enable: true 
   cx:   ## e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.
 ## https://www.google.com/cse/ 
 ## To enable the custom search You must create a "search" folder in '/source' and a "index.md" file

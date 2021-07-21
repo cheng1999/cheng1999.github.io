@@ -63,7 +63,7 @@ $ hexo new "article's title"
 ```
 然后对目录下 `source/_posts/` 的 Markdown 文件进行编辑，随便写写什么然后开浏览器直接预览，不需要重启 Hexo。
 Hexo 的一个文章的 Markdown 文件前面还需要一些头设置，自动生成的话它也会自己加入这些内容。
-![头示范](/images/hexo_postmd_head.png)
+![头示范](hexo_postmd_head.png)
 如果不会用 Markdown 的话没关系，它的学习成本很低，简单好用。
 这里有一个 Cheatsheet : <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
 

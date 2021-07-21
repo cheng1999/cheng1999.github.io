@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: true
-post_asset_folder: false
+post_asset_folder: true 
 relative_link: false
 future: true
 highlight:
@@ -63,6 +63,10 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+#plugins:
+#- hexo-server
+#- hexo-renderer-mathjax
+
 ## Themes: https://hexo.io/themes/
 theme: jacman
 
@@ -74,5 +78,10 @@ deploy:
   branch: master
 
 
-admin:
-  deployCommand: 'hexo'
+  #math:
+  #    engine: 'mathjax'
+  #    mathjax:
+  #        src: "//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  #        config:
+  #            tex2jax:
+  #                inlineMath: [ ['$','$'], ["\\(","\\)"] ]
