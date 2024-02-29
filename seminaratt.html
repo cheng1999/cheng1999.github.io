@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Input Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+    }
+    input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    label {
+        display: block;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+	textarea {
+		width: 85%;
+		height: 30vh;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<label for="idInput" id="nameDisplay"></label>
+    <input type="text" id="idInput" placeholder="Type something...">
+    <button id="submitBtn">Submit</button>
+	<textarea id="idList" disabled></textarea>
+</div>
+
+<script>
+    const idInput = document.getElementById('idInput');
+    const nameDisplay = document.getElementById('nameDisplay');
+    const submitBtn = document.getElementById('submitBtn');
+	const idList = document.getElementById('idList');
+	const data = [{name: "何嘉翰", id: "L26114241"}, {name: "劉旭東", id: "L28124022"}, {name: "劉睦恩", id: "L26121028"}, {name: "劉驊興", id: "L28124014"}, {name: "區嘉鋭", id: "L28111508"}, {name: "吳宣誼", id: "L28121024"}, {name: "吳峻毅", id: "L26124165"}, {name: "吳晨亘", id: "L26124270"}, {name: "吳賀陞", id: "L26124204"}, {name: "宋龍福", id: "L26111112"}, {name: " 官俊廷", id: "L26111031"}, {name: "張栢源", id: "L26111120"}, {name: "張瑗錞", id: "L26111081"}, {name: "張睿哲", id: "L26114194"}, {name: "張育銓", id: "L26114259"}, {name: "戴滉銍", id: "L26121222"}, {name: "曾俊翰", id: "L26114063"}, {name: "曾柏翰", id: "L26114217"}, {name: "朱佳宏", id: "L26124296"}, {name: "李仰高", id: "L26114152"}, {name: "李國成", id: "L26124238"}, {name: "李穎哲", id: "L26124050"}, {name: "李育仁", id: "L26124068"}, {name: "林佳儀", id: "L26114102"}, {name: "林大維", id: "L26121044"}, {name: "林妤庭", id: "L26121141"}, {name: "林孟逸", id: "L26124173"}, {name: "林宏 遠", id: "L26111146"}, {name: "林家睿", id: "L26121175"}, {name: "林庭永", id: "L26124254"}, {name: "林怡君", id: "L26114314"}, {name: "林昇達", id: "L26124076"}, {name: "林昌為", id: "L28121503"}, {name: "林明叡", id: "L26101078"}, {name: "林榮助", id: "L28114019"}, {name: "林泓宇", id: "L26121133"}, {name: "林鉦傑", id: "L26111243"}, {name: "林韋成", id: "L26111219"}, {name: "楊凱翔", id: "L26121230"}, {name: "楊子毅", id: "L26124335"}, {name: "楊柏源", id: "L28121016"}, {name: "楊聖亮", id: "L26114330"}, {name: "楊雙愷", id: "L26124212"}, {name: "洪浩晟", id: "L26124084"}, {name: "洪䕒䔖", id: "L26121159"}, {name: "涂育銘", id: "L26111235"}, {name: "温賜安", id: "L26124018"}, {name: "潘建淋", id: "L26134364"}, {name: "王仁佑", id: "L26114071"}, {name: "王文佑", id: "L26121183"}, {name: "王昱棠", id: "L28121529"}, {name: "王泓仁", id: "L26121214"}, {name: "紀承濬", id: "L26111251"}, {name: "芶儒龍", id: "L26114128"}, {name: "范志玲", id: "L26114136"}, {name: "葉建霆", id: "L26121060"}, {name: "蔡丞育", id: "L26121078"}, {name: "蔡宇翔", id: "L26111104"}, {name: "蔡岱融", id: "L26124034"}, {name: "蔡鎔丞", id: "L26124149"}, {name: "薇馬德維卡", id: "L26117011"}, {name: "袁清均", id: "L26111277"}, {name: "許哲彬", id: "L26124351"}, {name: "許嘉翔", id: "L26114186"}, {name: "許心瑜", id: "L28111566"}, {name: "許芸婕", id: "L26114089"}, {name: "詹朝全", id: "L26121010"}, {name: "賴柏融", id: "L28111516"}, {name: "賴資 佳", id: "L26124220"}, {name: "趙震中", id: "L26101206"}, {name: "辛晟宇", id: "L26121086"}, {name: "連展慶", id: "L28121040"}, {name: "郭任傑", id: "L26094140"}, {name: "郭博竣", id: "L26121117"}, {name: "郭邦舜", id: "L26124319"}, {name: "鄭博元", id: "L26114021"}, {name: "鄭宇軒", id: "L26111196"}, {name: "鄭渝諳", id: "L26124199"}, {name: "鍾鉉清", id: "L26124026"}, {name: "陳俊佑", id: "L26114209"}, {name: "陳信宏", id: "L26121036"}, {name: "陳光宇", id: "L26124246"}, {name: "陳冠佑", id: "L26111138"}, {name: "陳品翰", id: "L26121109"}, {name: "陳姸蓁", id: "L26121094"}, {name: "陳威廷", id: "L26111162"}, {name: "陳宗佑", id: "L26111023"}, {name: "陳宗瑨", id: "L26121167"}, {name: "陳宣穎", id: "L26111227"}, {name: "陳宥潤", id: "L26114097"}, {name: "陳彥鈞", id: "L26111057"}, {name: "陳文俊", id: "L26111170"}, {name: "陳昊鈞", id: "L26124157"}, {name: "陳昱瑋", id: "L26111188"}, {name: "陳昱辰", id: "L26114291"}, {name: "陳柏年", id: "L26121206"}, {name: "陳柏材", id: "L26114055"}, {name: "陳柏材", id: "L28121561"}, {name: "陳泓睿", id: "L26124301"}, {name: "魏嘉良", id: "L26114348"}, {name: "魏士程", id: "L26124123"}, {name: "黃仲鈞", id: "L26124327"}, {name: "黃偉宸", id: "L26124115"}, {name: "黃冠傑", id: "L26121191"}, {name: "黃子恩", id: "L28111558"}, {name: "黃子泰", id: "L28121032"}, {name: "黃寬宇", id: "L26121248"}, {name: "黃振豪", id: "L26121125"}, {name: "黃明彥", id: "L28071033"}, {name: "黃昭容", id: "L26111269"}, {name: "黃煒竣", id: "L26111154"}, {name: "黃祥瑋", id: "L26124262"}];
+	var attandance = [];
+	
+	idList.value="";
+	
+    // Function to handle submission
+    function handleSubmission() {
+        var id = idInput.value.trim();
+		var name = getName(id);
+		if (name){
+			showName(name);
+			//attandance.indexOf(id) === -1 ? attandance.push(id) : console.log("This item already exists");
+			if (attandance.indexOf(id) === -1){
+				attandance.push(id);
+				idList.value+=id+' '+name+'\n';
+				idList.scrollTop = idList.scrollHeight ;
+			}
+		}
+		else{
+			showName('No matching name found for the submitted ID.');
+		}
+		
+		//attandance.indexOf(id) === -1 ? array.push(id) : console.log("This item already exists");
+        //updateLabelText(inputValue);
+    }
+	function getName(id) {
+        // Get the ID from the input field
+        //const id = document.getElementById('idInput').value.trim();
+
+        // Search for the ID in the data array
+        var result = data.find(item => item.id === id);
+		
+        // Display the name if found, otherwise display an error message
+        //const nameDisplay = document.getElementById('nameDisplay');
+        if (result) {
+			return result.name;
+			
+            //nameDisplay.textContent = `Name: ${result.name}`;
+        } else {
+            //nameDisplay.textContent = 'No matching name found for the submitted ID.';
+			return 0;
+			//return 'No matching name found for the submitted ID.';
+			//updateLabelText('No matching name found for the submitted ID.');
+        }
+    }
+	// Function to update label text
+	function showName(text){
+		nameDisplay.textContent = text;
+	}
+
+    // Listen for click event on the submit button
+    submitBtn.addEventListener('click', handleSubmission);
+
+    // Listen for keypress event on the text input field
+    idInput.addEventListener('keypress', function(event) {
+        // Check if the pressed key is Enter (key code 13)
+        if (event.keyCode === 13) {
+            // Call handleSubmission function to submit input
+            handleSubmission();
+        }
+    });
+	
+
+</script>
+
+</body>
+</html>
